@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import com.stackmobile.calculadoragorjeta.databinding.ActivityMainBinding
 import java.text.NumberFormat
+import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         fun calculateTip() {
 
-            val stringInTextField = binding.costOfService.text.toString()
+            val stringInTextField = binding.costOfServiceEditText.text.toString()
             val cost = stringInTextField.toDoubleOrNull()
 
             if (cost == null) {
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 var tip = tipPercentage * cost
                 if ( binding.roundUpSwitch.isChecked) {
-                    tip = kotlin.math.ceil(tip)
+                    tip = ceil(tip)
                 }
 
                 val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
