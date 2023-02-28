@@ -5,8 +5,8 @@
     <string name="radio_incrivel">Incrivel (20%)</string>
     <string name="radio_bom">Bom (15%)</string>
     <string name="radio_ok">OK (10%)</string>
-    <string name="text_switch">Valor Rendondado</string>
-    <string name="text_button">Calculation</string>
+    <string name="text_switch">Valor Arredondar</string>
+    <string name="text_button">Calcular</string>
     <string name="tip_amount">Valor: %s</string>
 
 </resources>
